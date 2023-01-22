@@ -1,2 +1,2 @@
 # Anclok
-Proyectos y Challenges de Aiura
+Proyectos de Aiura
