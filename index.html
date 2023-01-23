@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <title>Encriptador y desencriptador</title>
   </head>
@@ -309,30 +310,72 @@
 /* Estilos para pantallas menores a 600px */
 
 /* Estilos para pantallas entre 600px y 1024px */
-@media (min-width: 600px) and (max-width: 1024px) {
-  /* código CSS aquí */
-  body{
-    background-color: purple;
+@media screen and (max-width: 450px) {
+  h1{
+    font-size: 1vh;
   }
-}
-@media (max-width: 550px) {
-  /* código CSS aquí */
-  body{
-    background-color: blue;
+  .container{
+    min-height: 82vh;
   }
 }
 
+@media screen and (max-width: 850px) {
+  /* código CSS aquí */
+  h1{
+    font-size: 2.5vh;
+  }
+  button{
+    font-size: 1.2vh;
+    padding: 12px 20px;
+  }
+  input{
+    margin: 5vh 0;
+  }
+  p{
+    font-size: 1.8vh;
+    margin: 5vh 0;
+  }
+  .container{
+    max-width: 80%;
+    min-height: 82vh;
+    margin-top: -5vh;
+  }
+  .encrypt-container{
+    width: 100%;
+    height: 50%;
+    transition: all opacity 800ms ease-in;
+  }
+  .decrypt-container{
+    width: 100%;
+    height: 50%;
+  }
+  .overlay-container{
+    width: 100%;
+    left: 0%;
+    height: 50%;
+    top: 50%;
+  }
+  .container.right-panel-active .decrypt-container{
+    transform: none;
+  }
+  .container.right-panel-active .overlay-container{
+    transform: none;
+  }
+  .warning{
+    padding: 1%;
+  }
+}
+@media (min-width: 850px) and (max-width: 1024px) {
+}
+
+
 /* Estilos para pantallas mayores a 1024px */
 @media (min-width: 1024px) {
-  /* código CSS aquí */
-  body{
-    background-color: black;
-  }
 }
 
     </style>
   <body onload="preloader()">
-    <div id="preloader">
+   <div id="preloader">
       <div id="loader"></div>
     </div>
     
@@ -399,7 +442,7 @@
             preloader.style.display = "none";
             document.body.style.overflow = "auto";
           }, 500);
-        }, 2200);
+        }, 2000);
       }
 
 
