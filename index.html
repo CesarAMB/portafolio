@@ -157,6 +157,13 @@
         margin: 50px 0;
         width: 100%;
       }
+      .warning{
+        margin-top: 1%;
+        background: black;
+        color: white;
+        padding: .5%;
+        border-radius: 20px;
+      }
       .container{
         background-color: #FFFFFF;
         border-radius: 10px;
@@ -299,9 +306,29 @@
       }
 
      
-/* 1 */
- /* 2, sobreescribe a 1 solo si es mayor a 800px */
+/* Estilos para pantallas menores a 600px */
 
+/* Estilos para pantallas entre 600px y 1024px */
+@media (min-width: 600px) and (max-width: 1024px) {
+  /* código CSS aquí */
+  body{
+    background-color: purple;
+  }
+}
+@media (max-width: 550px) {
+  /* código CSS aquí */
+  body{
+    background-color: blue;
+  }
+}
+
+/* Estilos para pantallas mayores a 1024px */
+@media (min-width: 1024px) {
+  /* código CSS aquí */
+  body{
+    background-color: black;
+  }
+}
 
     </style>
   <body onload="preloader()">
@@ -348,6 +375,7 @@
       </div>
 
     </div>
+    <div class="warning">Solo letras minúsculas y sin acentos</div>
 
     <footer>
       <p>Design By <a href="https://www.behance.net/anclok78010fda">Anclok</a></p>
@@ -371,7 +399,7 @@
             preloader.style.display = "none";
             document.body.style.overflow = "auto";
           }, 500);
-        }, 1800);
+        }, 2200);
       }
 
 
